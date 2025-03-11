@@ -9,7 +9,7 @@ This project delves into the competitive realm of Formula 1, aiming to uncover t
 
 # Methods
 ## Data Collection
-• Source: Data for every year of the Formula 1 World Championship ranging from 1950 – 2024 was sourced from Kaggle. - [F1 Data Source](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020/data "F1 Data Source")
+• Source: Data for every year of the Formula 1 World Championship ranging from 1950 – 2024 was sourced from Kaggle. - [F1 Data Source](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020/data "F1 Data Source")  
 • Data: The dataset contains results from each race, sprint race, and qualifying session, as well as the final standings of each season's Constructors' and Drivers' Championships.  
 • Variables: Critical variables include race wins, starting position, previous years' results, number of races, and other relevant metrics. (To be expanded)  
 • Data Preparation/Cleaning: The data was checked for missing values, outlier analysis was conducted to ensure data quality, merging of tables.  
