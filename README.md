@@ -21,8 +21,11 @@ The dataset includes race results, sprint races, qualifying sessions, and standi
 Relevant tables were selected to minimise data loading and calculation times. The final tables used from the dataset were; constructor_standings.csv, constructors.csv, driver_standings.csv, drivers.csv, races.csv, results.csv, and seasons.csv.
 The selected tables were merged in SQL with calculated columns added to produce the final output, ready for analysis.  
 ![Figure 1: SQL Queries for calculated fields for use in final output.](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%201.png)
+Figure 1: SQL Queries for calculated fields for use in final output.
  
 ![Figure 2: SQL Creation of final output table](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%202.png)
+Figure 2: SQL Creation of final output table
+
 The final output includes the following aggregated values:
 •	Wins and podiums in the previous season, and in total. 
 •	Champion in the previous season.
@@ -35,18 +38,23 @@ An overview of the output table is available in Appendix A.
 
  
 ![Figure 3: Initial assessment of dataframe loaded into python.](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%203.png)
+Figure 3: Initial assessment of dataframe loaded into python.
  
 ![Figure 4: Data Cleansing Steps undertaken in Python.](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%204.png)
+Figure 4: Data Cleansing Steps undertaken in Python.
  
 ![Figure 5: Data Aggregation Steps in Python.](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%205.png)
+Figure 5: Data Aggregation Steps in Python.
 
 ## Data Analysis
 Exploratory Data Analysis (EDA) was performed to identify the coefficients of variables for the model. A logistic regression model was developed using historical season results to predict whether a driver will win the championship in the subsequent season. These methods were chosen for their ability to offer clear, interpretable insights into complex datasets and their effectiveness in predicting outcomes based on historical data.
 
  
 ![Figure 6: Sample of EDA performed in Python.](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%206.png)
+Figure 6: Sample of EDA performed in Python.
  
 ![Figure 7: Balance assessment of dataset.](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%207.png)
+Figure 7: Balance assessment of dataset.
 
 The figure shows that the dataset is unbalanced with regards to the outcome of ‘DriverWonChampionship’. Solutions were considered to deal with this issue: 
 •	to create synthetic data with minority outcomes, potentially affecting model accuracy. (Tri Suci, Sari Hasibuan, and Pane 2022)
@@ -56,20 +64,26 @@ Although oversampling is a common practice, its justification is not well explai
 To create a more balanced dataset and focus on the 'Modern Era' of F1, data from seasons before 2010 was excluded, aligning with the introduction of the current points scoring system.
  
 ![Figure 8: Dropping data for all seasons before 2010 and new visual displaying a more balanced, but still unbalanced, dataset.](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%208.png)
+Figure 8: Dropping data for all seasons before 2010 and new visual displaying a more balanced, but still unbalanced, dataset.
 
 Although the dataset is still unbalanced, it is more balanced, moving from a ratio of over 45:1 majority to minority, to under 23:1. This helps balance the dataset without changing the integrity of the dataset and results. 
 
 The dataset is now prepared for a logistic regression model to be created. 
  
 ![Figure 9: Creation of Logistic Regression Model](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%209.png)
+Figure 9: Creation of Logistic Regression Model
  
 ![Figure 10: Model Assessment in Python](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%2010.png)
+Figure 10: Model Assessment in Python
  
 ![Figure 11: Further Model Assessment in Python](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%2011.png)
+Figure 11: Further Model Assessment in Python
  
 ![Figure 12: Model Coefficients in Python](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%2012.png)
+Figure 12: Model Coefficients in Python
  
-![Figure 13: Intercept and Coefficients in Python.](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%2013.png)
+![Figure 13: Intercept and Coefficients in Python](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%2013.png)
+Figure 13: Intercept and Coefficients in Python
 
 ## Results
 The results that the model achieved demonstrate that the model is working and gives results in the area to be expected, taking into account the unbalanced nature of the dataset. 
@@ -79,10 +93,12 @@ In Figure 12 we can see the coefficients of each of the variables used in the fi
 
  
 ![Figure 14: Final Equation of logistic regression model.](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%2014.png)
+Figure 14: Final Equation of logistic regression model
 
 Using this equation we can predict the winner of the 2025 drivers world championship be creating a dataset containing all the same statistics of the 2025 drivers and applying this formula to them. The 2025 drivers dataset was created as a csv file, run through the same python data engineering steps and then subjected to the final model equation. Which gives the results in Figure 15, below. 
 
 ![Figure 15: 2025 Drivers  logit_p outputs](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%2015.png)
+Figure 15: 2025 Drivers  logit_p outputs
 
 ## Discussion
 Figure 10 shows the model's accuracy at 97.2%, indicating high predictive performance (Classification: Accuracy, Recall, Precision, and Related Metrics | Machine Learning n.d.). However, in imbalanced datasets, accuracy can be misleading as it may reflect the majority class. The balanced accuracy of 66.67% provides a more realistic measure, highlighting difficulty in predicting the minority class but still above the 50% expected by chance.
