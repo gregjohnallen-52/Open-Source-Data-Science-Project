@@ -1,5 +1,6 @@
 # Section A – Open Source Data Science Project
 ## Formula 1 Predictions using 1950-2024 dataset
+![F1 Race Start](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/race_start.gif)
 
 ## Executive Summary
 This project aims to predict the next Formula 1 Drivers' World Champion using a logistic regression model. The model achieves a balanced accuracy of 66.67% and an F1-score of 50. Key predictors identified include Constructor Overall Win Percentage, Constructor Form, and Driver Win Percentage in the previous season. These insights offer a compelling perspective on the sport's competitiveness in the modern era.
