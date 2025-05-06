@@ -21,7 +21,7 @@ The dataset includes race results, sprint races, qualifying sessions, and standi
 Relevant tables were selected to minimise data loading and calculation times. The final tables used from the dataset were; constructor_standings.csv, constructors.csv, driver_standings.csv, drivers.csv, races.csv, results.csv, and seasons.csv.
 The selected tables were merged in SQL with calculated columns added to produce the final output, ready for analysis.  
 ![Figure 1: SQL Queries for calculated fields for use in final output.](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%201.png)
-Figure 1: SQL Queries for calculated fields for use in final output.
+  Figure 1: SQL Queries for calculated fields for use in final output.
  
 ![Figure 2: SQL Creation of final output table](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%202.png)
 Figure 2: SQL Creation of final output table
