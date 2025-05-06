@@ -108,7 +108,7 @@ The F1-score for the true class is 50.0, indicating struggles with precision and
 
 Figure 11's ROC curve shows an AUC of 0.67, indicating moderate performance (Cuantum Technologies LLC 2025). Figure 12 highlights reliance on the constructor's historical win percentage and recent form, with less importance on driver wins and constructor podiums in the previous season. Surprisingly, the model assigns strong negative importance to cumulative championships won by both driver and constructor, contrary to expectations.
 
-Figure 15 shows the model predicted no clear winner for the 2025 season, classifying Norris as the most likely winner, with Verstappen and Piastri also in contention. Some results are questionable, such as Hamilton being least likely despite being at a competitive Ferrari team, and rookie drivers like Bearman being highly rated. This suggests an imbalance in handling rookie drivers, indicated by the negative impact of cumulative championships in Figure 14.
+Figure 15 shows the model predicted no clear winner for the 2025 season, classifying Norris as the most likely winner, with Verstappen and Piastri also in contention. Some results are questionable, such as Hamilton being least likely despite being at a competitive Ferrari team, and rookie drivers like Bearman being highly rated. This suggests an imbalance in handling rookie drivers, indicated by the negative impact of cumulative championships in Figure 14.  
 ![Lando Norris Winning](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/lando-norris-first-win.gif)
 
 ## Potential Improvements
