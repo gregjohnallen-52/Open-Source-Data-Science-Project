@@ -19,7 +19,7 @@ Data for every year of the Formula 1 World Championship ranging from 1950 – 20
 The dataset includes race results, sprint races, qualifying sessions, and standings for Constructors' and Drivers' Championships, along with constructor and driver details, lap times, and pit stop times. Critical variables include race wins, podiums, previous results, championships, races entered, and finishing positions.
 
 ## Data Engineering
-Relevant tables were selected to minimise data loading and calculation times. The final tables used from the dataset were; constructor_standings.csv, constructors.csv, driver_standings.csv, drivers.csv, races.csv, results.csv, and seasons.csv.
+Relevant tables were selected to minimise data loading and calculation times. The final tables used from the dataset were constructor_standings.csv, constructors.csv, driver_standings.csv, drivers.csv, races.csv, results.csv, and seasons.csv.
 The selected tables were merged in SQL with calculated columns added to produce the final output, ready for analysis.  
 ![Figure 1: SQL Queries for calculated fields for use in final output.](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%201.png)  
 Figure 1: SQL Queries for calculated fields for use in final output.
@@ -33,7 +33,7 @@ The final output includes the following aggregated values:
 •	Form based on average position over previous five seasons.
 •	Boolean indicator of winning the championship.
 •	Number of races entered.
-These aggregates include elements of recent form and historical performance, allowing the model to be influenced by current form, experience, and historical success. Wins and podiums will be converted to percentages by season and overall in Python to balance the dataset across different eras.
+These aggregates include elements of recent form and historical performance, allowing the model to be influenced by current form, experience, and historical success. Wins and podiums will be converted to percentages by season and overall, in Python to balance the dataset across different eras.
 
 An overview of the output table is available in Appendix A. 
 
@@ -60,7 +60,7 @@ Figure 7: Balance assessment of dataset.
 The figure shows that the dataset is unbalanced with regards to the outcome of ‘DriverWonChampionship’. Solutions were considered to deal with this issue: 
 •	to create synthetic data with minority outcomes, potentially affecting model accuracy. (Tri Suci, Sari Hasibuan, and Pane 2022)
 •	Class Weight Adjustment, to assign a higher weight to the majority outcomes. 
-•	Ensemble Methons such as Random Forest or Gradient Boosting. 
+•	Ensemble methods such as Random Forest or Gradient Boosting. 
 Although oversampling is a common practice, its justification is not well explained(Salas-Eljatib et al. 2018). Given the inherently unbalanced nature of Formula 1 outcomes, it was decided to proceed with the unbalanced dataset, as no resampling technique could guarantee improved model performance (Ke et al. 2024).
 To create a more balanced dataset and focus on the 'Modern Era' of F1, data from seasons before 2010 was excluded, aligning with the introduction of the current points scoring system.
  
@@ -87,7 +87,7 @@ Figure 12: Model Coefficients in Python
 Figure 13: Intercept and Coefficients in Python
 
 ## Results
-The results that the model achieved demonstrate that the model is working and gives results in the area to be expected, taking into account the unbalanced nature of the dataset. 
+The results that the model achieved demonstrate that the model is working and gives results in the area to be expected, considering the unbalanced nature of the dataset. 
 In Figure 10 the accuracy of the model is given at 97.2%, a balanced accuracy of 66.67% and an F1-score of 50.0.
 In Figure 11 we can see the ROC curve for the model with an Area Under the Curve (AUC) of 0.67.
 In Figure 12 we can see the coefficients of each of the variables used in the final model and Figure 13 gives the intercept of the model. 
@@ -96,7 +96,7 @@ In Figure 12 we can see the coefficients of each of the variables used in the fi
 ![Figure 14: Final Equation of logistic regression model.](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%2014.png)  
 Figure 14: Final Equation of logistic regression model
 
-Using this equation we can predict the winner of the 2025 drivers world championship be creating a dataset containing all the same statistics of the 2025 drivers and applying this formula to them. The 2025 drivers dataset was created as a csv file, run through the same python data engineering steps and then subjected to the final model equation. Which gives the results in Figure 15, below. 
+Using this equation, we can predict the winner of the 2025 drivers world championship be creating a dataset containing all the same statistics of the 2025 driver's and applying this formula to them. The 2025 driver's dataset was created as a csv file, run through the same python data engineering steps and then subjected to the final model equation. Which gives the results in Figure 15, below. 
 
 ![Figure 15: 2025 Drivers  logit_p outputs](https://github.com/gregjohnallen-52/Open-Source-Data-Science-Project/blob/main/Figures/Figure%2015.png)  
 Figure 15: 2025 Drivers  logit_p outputs
